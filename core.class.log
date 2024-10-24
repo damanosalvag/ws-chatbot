@@ -2,155 +2,67 @@
   key: {
     remoteJid: '573197522994@s.whatsapp.net',
     fromMe: false,
-    id: '1E1C6F1533305E374CCF88245D7723F9',
+    id: 'F0FFB40A8ADB662568975D45B5DCF1E1',
     participant: undefined
   },
-  messageTimestamp: 1729729670,
+  messageTimestamp: 1729791286,
   pushName: 'Dairo Manosalva',
   broadcast: false,
   message: Message {
-    conversation: 'Test',
+    conversation: 'Menu',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'Test',
+  body: 'Menu',
   from: '573197522994'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
-  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
-  answer: 'Este es el flujo welcome',
+  ref: 'ans_4fb7b1e0-fdc1-43e6-8f19-ed71ebd1d199',
+  keyword: 'key_f85662bd-1140-46ee-9d5a-921a3a27d943',
+  answer: 'Elige alguna de estas opciones:\r\n' +
+    '\r\n' +
+    'Opcion 1 - Op1\r\n' +
+    'Opcion 2 - Op2\r\n' +
+    'Opcion 3 - Op3\r\n' +
+    'Opcion 4 - Op4\r\n' +
+    'Opcion 5 - Op5\r\n' +
+    '\r\n' +
+    'Opcion 0 - Salir',
   options: {
     media: null,
     buttons: [],
-    capture: false,
+    capture: true,
     child: null,
-    delay: 500,
+    delay: 0,
     idle: null,
     ref: null,
     nested: [],
     keyword: {},
     callback: true
   },
-  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
+  refSerialize: 'dfa220bb798ffa3bfa9b4d4695f5c6ba'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573197522994@s.whatsapp.net',
     fromMe: false,
-    id: 'BFE181674666B430B0571084296E3373',
+    id: '1584832A5E4F21B410EB16F68729C43B',
     participant: undefined
   },
-  messageTimestamp: 1729729677,
+  messageTimestamp: 1729791305,
   pushName: 'Dairo Manosalva',
   broadcast: false,
   message: Message {
-    conversation: 'Casa',
+    conversation: '1',
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2,
       messageSecret: [Uint8Array]
     }
   },
-  body: 'Casa',
+  body: '1',
   from: '573197522994'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
-  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
-  answer: 'Este es el flujo welcome',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 500,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573197522994@s.whatsapp.net',
-    fromMe: false,
-    id: '11D9AB7433BF222BF80533B1D1473241',
-    participant: undefined
-  },
-  messageTimestamp: 1729729685,
-  pushName: 'Dairo Manosalva',
-  broadcast: false,
-  message: Message {
-    conversation: 'Casas',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'Casas',
-  from: '573197522994'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
-  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
-  answer: 'Este es el flujo welcome',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 500,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573197522994@s.whatsapp.net',
-    fromMe: false,
-    id: 'AEB8058E4A315CFEF6C49ADB012F0A2B',
-    participant: undefined
-  },
-  messageTimestamp: 1729729693,
-  pushName: 'Dairo Manosalva',
-  broadcast: false,
-  message: Message {
-    conversation: 'casas',
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2,
-      messageSecret: [Uint8Array]
-    }
-  },
-  body: 'casas',
-  from: '573197522994'
-}
-[QUEUE_SE_ENVIO]:  {
-  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
-  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
-  answer: 'Este es el flujo welcome',
-  options: {
-    media: null,
-    buttons: [],
-    capture: false,
-    child: null,
-    delay: 500,
-    idle: null,
-    ref: null,
-    nested: [],
-    keyword: {},
-    callback: true
-  },
-  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
 }
