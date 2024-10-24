@@ -1,0 +1,156 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '573197522994@s.whatsapp.net',
+    fromMe: false,
+    id: '1E1C6F1533305E374CCF88245D7723F9',
+    participant: undefined
+  },
+  messageTimestamp: 1729729670,
+  pushName: 'Dairo Manosalva',
+  broadcast: false,
+  message: Message {
+    conversation: 'Test',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Test',
+  from: '573197522994'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
+  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
+  answer: 'Este es el flujo welcome',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 500,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573197522994@s.whatsapp.net',
+    fromMe: false,
+    id: 'BFE181674666B430B0571084296E3373',
+    participant: undefined
+  },
+  messageTimestamp: 1729729677,
+  pushName: 'Dairo Manosalva',
+  broadcast: false,
+  message: Message {
+    conversation: 'Casa',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Casa',
+  from: '573197522994'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
+  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
+  answer: 'Este es el flujo welcome',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 500,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573197522994@s.whatsapp.net',
+    fromMe: false,
+    id: '11D9AB7433BF222BF80533B1D1473241',
+    participant: undefined
+  },
+  messageTimestamp: 1729729685,
+  pushName: 'Dairo Manosalva',
+  broadcast: false,
+  message: Message {
+    conversation: 'Casas',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'Casas',
+  from: '573197522994'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
+  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
+  answer: 'Este es el flujo welcome',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 500,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573197522994@s.whatsapp.net',
+    fromMe: false,
+    id: 'AEB8058E4A315CFEF6C49ADB012F0A2B',
+    participant: undefined
+  },
+  messageTimestamp: 1729729693,
+  pushName: 'Dairo Manosalva',
+  broadcast: false,
+  message: Message {
+    conversation: 'casas',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2,
+      messageSecret: [Uint8Array]
+    }
+  },
+  body: 'casas',
+  from: '573197522994'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_ac92fcc4-b72e-4888-8c88-6b4a0361bdb2',
+  keyword: 'key_f0939e99-1889-41c0-9104-f491687b6b71',
+  answer: 'Este es el flujo welcome',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 500,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'a0bc4bfdfb01991e8bdd3be93d04c614'
+}
