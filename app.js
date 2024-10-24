@@ -5,21 +5,24 @@ const {
   addKeyword,
   EVENTS,
 } = require("@bot-whatsapp/bot");
+require("dotenv").config();
 
 const QRPortalWeb = require("@bot-whatsapp/portal");
 const BaileysProvider = require("@bot-whatsapp/provider/baileys");
-const MockAdapter = require("@bot-whatsapp/database/mock");
+//const MockAdapter = require("@bot-whatsapp/database/mock");
+const MongoAdapter = require("@bot-whatsapp/database/mongo");
 const { delay } = require("@whiskeysockets/baileys");
 
 const path = require("path");
 const fs = require("fs");
+const chat = require("./chatgpt");
 
 const menuPath = path.join(__dirname, "mensajes", "menu.txt");
 const menu = fs.readFileSync(menuPath, "utf8");
 
-const flowPrincipal = addKeyword(["hola", "ole", "alo"]).addAnswer(
-  "Hola buenos dias"
-);
+const consultasPath = path.join(__dirname, "mensajes", "promptConsultas.txt");
+const promptConsultas = fs.readFileSync(consultasPath, "utf8");
+
 const flowWelcome = addKeyword(EVENTS.WELCOME).addAnswer(
   "Este es el flujo welcome",
   {
@@ -36,26 +39,43 @@ const flowWelcome = addKeyword(EVENTS.WELCOME).addAnswer(
   }
 );
 
+const flowMenuRest = addKeyword(EVENTS.ACTION).addAnswer("Este es el menu", {
+  media: "https://www.elcorral.com/pdf/EC_Menu_Digital.pdf",
+});
+const flowReservar = addKeyword(EVENTS.ACTION).addAnswer(
+  "Reservas en: www.rubyk.shop"
+);
+const flowConsultas = addKeyword(EVENTS.ACTION)
+  .addAnswer("Consultas")
+  .addAnswer(
+    "Ingresa tu consulta",
+    {
+      capture: true,
+    },
+    async (ctx, ctxFn) => {
+      const prompt = promptConsultas;
+      const consulta = ctx.body;
+      const answer = await chat(prompt, consulta);
+      await ctxFn.flowDynamic(answer.content);
+    }
+  );
+
 const menuFlow = addKeyword("Menu").addAnswer(
   menu,
   { capture: true },
   async (ctx, { gotoFlow, fallBack, flowDynamic }) => {
-    if (!["1", "2", "3", "4", "5", "0"].includes(ctx.body)) {
+    if (!["1", "2", "3", "0"].includes(ctx.body)) {
       return fallBack(
         "Respuesta no valida, por favor selecciona una de las opciones."
       );
     }
     switch (ctx.body) {
       case "1":
-        return await flowDynamic("Esta es la opcion 1");
+        return gotoFlow(flowMenuRest);
       case "2":
-        return await flowDynamic("Esta es la opcion 2");
+        return gotoFlow(flowReservar);
       case "3":
-        return await flowDynamic("Esta es la opcion 3");
-      case "4":
-        return await flowDynamic("Esta es la opcion 4");
-      case "5":
-        return await flowDynamic("Esta es la opcion 5");
+        return gotoFlow(flowConsultas);
       case "0":
         return await flowDynamic(
           "Saliendo... Puedes volver a acceder a este menu escribiendo '*Menu*' "
@@ -65,8 +85,17 @@ const menuFlow = addKeyword("Menu").addAnswer(
 );
 
 const main = async () => {
-  const adapterDB = new MockAdapter();
-  const adapterFlow = createFlow([flowPrincipal, flowWelcome, menuFlow]);
+  const adapterDB = new MongoAdapter({
+    dbUri: process.env.MONGO_DB_URI,
+    dbName: "chat-ws",
+  });
+  const adapterFlow = createFlow([
+    flowMenuRest,
+    flowWelcome,
+    menuFlow,
+    flowReservar,
+    flowConsultas,
+  ]);
   const adapterProvider = createProvider(BaileysProvider);
 
   createBot({
