@@ -1,7 +1,7 @@
 {
     "name": "base-bailey-memory",
     "version": "1.0.0",
-    "description": "",
+    "description": "chatbot para ws",
     "main": "app.js",
     "scripts": {
         "prestart": "npx eslint . --no-ignore",
