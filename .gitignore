@@ -1,3 +1,8 @@
 node_modules
 .env
 .vscode
+bot_sessions
+core.class.log
+queue.class.log
+baileys.log
+bot.qr.png
